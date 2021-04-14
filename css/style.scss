@@ -1,6 +1,4 @@
 $widthSite: 1140px;
-$headerMinHeight: 768px;
-$headerMenuPaddingTop: 34px;
 $color-site: #afa;
 
 * {
@@ -12,138 +10,65 @@ $color-site: #afa;
     max-width: $widthSite;
     margin: 0 auto;
 }  
+
 body {
     font-family: sans-serif;
     font-size: 16px;
     line-height: 26px;
-    color: #1f3f68;
+    color: #444;
+}
 
-    .header {
-        background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
-        min-height: $headerMinHeight;
-        &_menu {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: $headerMenuPaddingTop;
-        }
-        &_menu>li {
+/* Прижатие подвала к полу */
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &_top {
+        flex-grow: 1;
+    }
+}
+
+/* Заголовок */
+.header {
+    height: 100px;
+    background-color: $color-site + #222;
+}
+
+/* Тело */
+.nav {
+    background-color: $color-site + #333;
+    .menu {
+        display: flex;
+        justify-content: start;
+        &_list {
             list-style-type: none;
         }
-        &_main {
-            .top {
-                display: flex;
-                justify-content: space-between;
-                background-image: url(../img/illustration.png);
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                &_info h1 {
-                    width: 504px;
-                    padding-top: 50px;
-                    font-weight: 300;
-                    font-size: 64px;
-                    line-height: 74px;
-                    letter-spacing: 0.04em;
-                    color: #1F3F68;
-                }
-                &_info p {
-                    width: 425px;
-                    padding-top: 32px;
-                    font-size: 16px;
-                    line-height: 26px;
-                    letter-spacing: 0.05em;
-                    color: #1F3F68;
-                    opacity: 0.6;
-                }
-                &_button {
-                    background: #5A98D0;
-                    border-radius: 10px;
-                    font-size: 16px;
-                    line-height: 26px;
-                    text-align: center;
-                    letter-spacing: 0.04em;
-                    color: #ffffff;
-                    padding: 15px 20px;
-                    text-decoration: none;
-                    display: inline-block;
-                    margin-top: 51px;
-                    margin-bottom: 50px;
-                    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-                }
-            }
+        &_link {
+            margin: 10px 1px;
+            padding: 10px 5px;
+            text-decoration: none;
+            display: block;
         }
     }
-    .footer {
-        background-color: #316099;
-        min-height: 657px;
-        &_parent {
-            display: flex;
-            justify-content: space-between;
-        }
-        &_header {
-            padding-top: 91px;
-            width: 495px;
-        }
-        &_header h3 {
-
-            font-size: 36px;
-            line-height: 46px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;    
-        }
-        &_header p {
-            margin-top: 32px;
-            margin-bottom: 96px;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            opacity: 0.6;
-        }
-        &_button a {
-            background: #5A98D0;
-            font-size: 16px;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 0.04em;
-            color: #ffffff;
-            padding: 15px 20px;
-            text-decoration: none;
-            display: inline-block;
-            width: 236px;
-            margin-top: 165px;
-        }
-        &_menu {
-            margin-top: 64px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 20px;
-        }
-        &_info li {
-            max-width: 349px;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        &_info a {
-            width: 359px;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        &_copyright p {
-            margin-top: 64px;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            opacity: 0.4;
-            padding-bottom: 30px;
-        }
-
+}
+.content {
+    background-color: $color-site + #111;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &_item {
+        background-color: $color-site - #222;
+        width: $widthSite / 3;
+        height: 200px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: 1px solid #111;
+        padding: 10px;
     }
+}
+
+/* Подвал */
+.footer {
+    height: 100px;
+    background-color: $color-site + #222;
 }

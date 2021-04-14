@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -12,167 +13,84 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 26px;
-  color: #1f3f68;
+  color: #444;
 }
 
-body .header {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(8.84%, #EBF3FB), color-stop(31.12%, rgba(152, 195, 232, 0)));
-  background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
-  min-height: 768px;
-}
-
-body .header_menu {
+/* Прижатие подвала к полу */
+.wrap {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 34px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body .header_menu > li {
+.wrap_top {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/* Заголовок */
+.header {
+  height: 100px;
+  background-color: #ccffcc;
+}
+
+/* Тело */
+.nav {
+  background-color: #ddffdd;
+}
+
+.nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.nav .menu_list {
   list-style-type: none;
 }
 
-body .header_main .top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-image: url(../img/illustration.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-
-body .header_main .top_info h1 {
-  width: 504px;
-  padding-top: 50px;
-  font-weight: 300;
-  font-size: 64px;
-  line-height: 74px;
-  letter-spacing: 0.04em;
-  color: #1F3F68;
-}
-
-body .header_main .top_info p {
-  width: 425px;
-  padding-top: 32px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.05em;
-  color: #1F3F68;
-  opacity: 0.6;
-}
-
-body .header_main .top_button {
-  background: #5A98D0;
-  border-radius: 10px;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  padding: 15px 20px;
+.nav .menu_link {
+  margin: 10px 1px;
+  padding: 10px 5px;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 51px;
-  margin-bottom: 50px;
-  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  display: block;
 }
 
-body .footer {
-  background-color: #316099;
-  min-height: 657px;
-}
-
-body .footer_parent {
+.content {
+  background-color: #bbffbb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-body .footer_header {
-  padding-top: 91px;
-  width: 495px;
+.content_item {
+  background-color: #88dd88;
+  width: 380px;
+  height: 200px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #111;
+  padding: 10px;
 }
 
-body .footer_header h3 {
-  font-size: 36px;
-  line-height: 46px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-}
-
-body .footer_header p {
-  margin-top: 32px;
-  margin-bottom: 96px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  opacity: 0.6;
-}
-
-body .footer_button a {
-  background: #5A98D0;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  padding: 15px 20px;
-  text-decoration: none;
-  display: inline-block;
-  width: 236px;
-  margin-top: 165px;
-}
-
-body .footer_menu {
-  margin-top: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 20px;
-}
-
-body .footer_info li {
-  max-width: 349px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-body .footer_info a {
-  width: 359px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-body .footer_copyright p {
-  margin-top: 64px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
-  opacity: 0.4;
-  padding-bottom: 30px;
+/* Подвал */
+.footer {
+  height: 100px;
+  background-color: #ccffcc;
 }
 /*# sourceMappingURL=style.css.map */
