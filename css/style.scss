@@ -1,11 +1,13 @@
 $widthSite: 1140px;
 $headerMinHeight: 768px;
 $headerMenuPaddingTop: 34px;
+$color-site: #afa;
 
 * {
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: $widthSite;
     margin: 0 auto;
@@ -70,10 +72,7 @@ body {
                 }
             }
         }
-
-
     }
-
     .footer {
         background-color: #316099;
         min-height: 657px;
@@ -148,12 +147,3 @@ body {
 
     }
 }
-
-
-
-
-
-
-
-
-
